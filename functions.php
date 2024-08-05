@@ -34,3 +34,10 @@ function hello_elementor_child_scripts_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
+
+//Create a shortcode to display a list of recent posts:
+function custom_message_shortcode() {
+    return 'This is a custom message.';
+}
+add_shortcode('custom_message', 'custom_message_shortcode');
+
